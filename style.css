@@ -10,25 +10,6 @@
       --button-light: #00a950;
    }
 
-    @media (max-width: 768px) {
-      /* Adjust your styles for smaller screens here */
-      .col-12 {
-        width: 100%; /* Make columns full-width on smaller screens */
-      }
-    }
-
-    /* Example media query for screens larger than 768px (desktop) */
-    @media (min-width: 769px) {
-      /* Adjust your styles for larger screens here */
-      #name {
-        text-align: center;
-      }
-
-      #img {
-        text-align: center;
-      }
-    }
-
    @font-face {
       font-family: cal;
       src: url("california.ttf");
@@ -56,6 +37,27 @@
       background-size: cover;
       transition: background-color 0.3s, color 0.3s;
       }
+      .glitch {
+        font-size: 3rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    @media (max-width: 768px) {
+        /* Media query for screens with a maximum width of 768px (typical mobile phone size) */
+    
+        .glitch {
+            font-size: 2rem; /* Reduce font size for mobile */
+        }
+    
+        h2 {
+            font-size: 1.5rem; /* Reduce font size for mobile */
+        }
+        
+        /* Additional styling for small screens, if needed */
+    }
 
    .dark-mode {
       background-color: #F0F0FF !important;
@@ -138,6 +140,8 @@
      justify-content: center;
      text-align: center;
      background-color: #222;
+     max-width: 100%;
+     height: auto;
   }
   
   .glitch {
@@ -386,7 +390,24 @@
  #nav{
    height: 160px;
  }
+ 
+ #img{
+   width: 100px;
+ }
 
+ #profile-image {
+  transition: all 0.5s; /* Add a smooth transition effect for visibility */
+}
+
+@media (max-width: 768px) {
+  /* Media query for screens with a maximum width of 768px (typical mobile phone size) */
+
+  #profile-image {
+      display: none; /* Hide the image on smaller screens */
+  }
+
+  /* Additional styling for small screens, if needed */
+}
  
  #about{
    height: 800px;
@@ -905,3 +926,37 @@
    transition: background 0.5s ease;
    width: 100%;
  }
+
+ img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 2rem; /* This will be relative to the base font size */
+}
+
+p {
+  font-size: 1rem; /* Adjust the font size accordingly */
+}
+
+@media (max-width: 768px) {
+  /* Adjust your styles for smaller screens here */
+  #mainNavigation {
+    padding-bottom: 0;
+  }
+  .nav-item {
+    min-width: auto;
+  }
+  /* Add more adjustments as needed */
+}
+
+
+.glitch {
+  max-width: 100%;
+  height: auto;
+}
