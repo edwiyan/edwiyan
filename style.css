@@ -10,6 +10,25 @@
       --button-light: #00a950;
    }
 
+    @media (max-width: 768px) {
+      /* Adjust your styles for smaller screens here */
+      .col-12 {
+        width: 100%; /* Make columns full-width on smaller screens */
+      }
+    }
+
+    /* Example media query for screens larger than 768px (desktop) */
+    @media (min-width: 769px) {
+      /* Adjust your styles for larger screens here */
+      #name {
+        text-align: center;
+      }
+
+      #img {
+        text-align: center;
+      }
+    }
+
    @font-face {
       font-family: cal;
       src: url("california.ttf");
